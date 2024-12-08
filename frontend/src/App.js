@@ -1,0 +1,19 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './page/home'; // Importing Home component
+import StaffHome from './page/staffhome'; // Correct import path for StaffHome
+
+function App() {
+    return (
+        <Router>
+            <Routes>
+                {/* Route for Home page */}
+                <Route path="/" element={<Home />} />
+                {/* Route for StaffHome page */}
+                <Route path="/staffhome" element={<StaffHome />} />
+            </Routes>
+        </Router>
+    );
+}
+
+export default App;
